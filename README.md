@@ -29,8 +29,7 @@ Size of Test.csv - 2GB
 Number of rows in Train.csv = 6034195
 
 The questions are randomized and contains a mix of verbose text sites as well as sites related to math and programming. The number of questions from each site may vary, and no filtering has been performed on the questions (such as closed questions).
-
-###Data Field Explaination
+### Data Field Explaination
 
 Dataset contains 6,034,195 rows. The columns in the table are:
 
@@ -47,6 +46,19 @@ It is a multi-label classification problem.
 Multi-label Classification: Multilabel classification assigns to each sample a set of target labels. This can be thought as predicting properties of a data-point that are not mutually exclusive, such as topics that are relevant for a document. A question on Stackoverflow might be about any of C, Pointers, FileIO and/or memory-management at the same time or none of these.
 
 ### 2.2.2 Performance metric
+<b> Micro-Averaged F1-Score (Mean F Score) </b>: The F1 score can be interpreted as a weighted average of the precision and recall, where an F1 score reaches its best value at 1 and worst score at 0. The relative contribution of precision and recall to the F1 score are equal. The formula for the F1 score is:
+
+F1 = 2 * (precision * recall) / (precision + recall)
+
+In the multi-class and multi-label case, this is the weighted average of the F1 score of each class.
+
+<b> 'Micro f1 score'</b>:
+Calculate metrics globally by counting the total true positives, false negatives and false positives. This is a better metric when we have class imbalance.
+
+<b> 'Macro f1 score'</b>:
+Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.
+
+<b> Hamming loss </b>: The Hamming loss is the fraction of labels that are incorrectly predicted.
 
 
 
